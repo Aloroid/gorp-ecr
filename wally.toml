@@ -1,0 +1,9 @@
+[package]
+name = "aloroid/gorp-ecr"
+version = "0.2.0-indev6"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+gorp = "aloroid/gorp@0.2.0-indev6"
+ecr = "centau/ecr@0.8.0"

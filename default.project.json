@@ -1,0 +1,6 @@
+{
+	"name": "gorp-ecr",
+	"tree": {
+		"$path": "src"
+	}
+}

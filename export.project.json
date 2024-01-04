@@ -1,0 +1,15 @@
+{
+	"name": "gorp-ecr",
+	"tree": {
+		"$className": "DataModel",
+
+		"Packages": {
+			"$path": "Packages",
+
+			"gorpecr": {
+				"$path": "src"
+			}
+
+		}
+	}
+}
