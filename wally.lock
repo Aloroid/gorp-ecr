@@ -4,13 +4,13 @@ registry = "test"
 
 [[package]]
 name = "aloroid/gorp"
-version = "0.2.0-indev6"
+version = "0.2.0-indev7"
 dependencies = [["ecr", "centau/ecr@0.8.0"], ["vide", "centau/vide@0.2.0"]]
 
 [[package]]
 name = "aloroid/gorp-ecr"
-version = "0.2.0-indev6"
-dependencies = [["ecr", "centau/ecr@0.8.0"], ["gorp", "aloroid/gorp@0.2.0-indev6"]]
+version = "0.2.0-indev7"
+dependencies = [["ecr", "centau/ecr@0.8.0"], ["gorp", "aloroid/gorp@0.2.0-indev7"]]
 
 [[package]]
 name = "centau/ecr"
