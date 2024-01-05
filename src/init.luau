@@ -31,9 +31,11 @@ gorp.ecs_layer.write = function(world: World, id: Id, ctype: unknown, value: unk
 end
 
 gorp.ecs_layer.on_change = function(world: World, ctype: unknown, callback: (Id, unknown) -> ())
-	local connection = world:on_change(ctype):connect(callback)
+	local changed = world:on_change(ctype):connect(callback)
+	local added = world:on_add(ctype):connect(callback)
 	return function()
-		connection:disconnect()
+		added:disconnect()
+		changed:disconnect()
 	end
 end
 
