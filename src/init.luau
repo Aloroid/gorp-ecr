@@ -23,6 +23,7 @@ gorp.ecs_layer.get = function(world: World, id: Id, ctype: unknown)
 end
 
 gorp.ecs_layer.query = function(world: World, included: {unknown}, excluded: {unknown})
+	if #included == 0 then included = {ecr.entity} end
 	return world:view(unpack(included)):exclude(unpack(excluded))
 end
 
