@@ -160,19 +160,17 @@ local function hook(resume: () -> ())
 		callback()
 	end
 
-	local components = gorp.get_components()
-
 	for _, view in stored_views do
 		local stats = view._get_stats()
 		local includes = table.clone(view.includes)
 		local excludes = table.clone(view.excludes or {} :: never)
 
 		for i, ctype in includes do
-			includes[i] = components.map_ctype_index[ctype]
+			includes[i] = gorp.map_ctype_to_index[ctype]
 		end
 
 		for i, ctype in excludes do
-			excludes[i] = components.map_ctype_index[ctype]
+			excludes[i] = gorp.map_ctype_to_index[ctype]
 		end
 
 		write_buffer({

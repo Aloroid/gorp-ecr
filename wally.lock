@@ -4,20 +4,20 @@ registry = "test"
 
 [[package]]
 name = "aloroid/gorp"
-version = "0.2.0-indev7"
-dependencies = [["ecr", "centau/ecr@0.8.0"], ["vide", "centau/vide@0.2.0"]]
+version = "0.2.0-rc2"
+dependencies = [["vide", "aloroid/vide-with-types@0.2.2"]]
 
 [[package]]
 name = "aloroid/gorp-ecr"
-version = "0.2.0-indev7"
-dependencies = [["ecr", "centau/ecr@0.8.0"], ["gorp", "aloroid/gorp@0.2.0-indev7"]]
+version = "0.2.0-rc1"
+dependencies = [["ecr", "centau/ecr@0.8.0"], ["gorp", "aloroid/gorp@0.2.0-rc2"]]
+
+[[package]]
+name = "aloroid/vide-with-types"
+version = "0.2.2"
+dependencies = []
 
 [[package]]
 name = "centau/ecr"
 version = "0.8.0"
-dependencies = []
-
-[[package]]
-name = "centau/vide"
-version = "0.2.0"
 dependencies = []

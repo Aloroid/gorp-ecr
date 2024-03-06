@@ -27,8 +27,22 @@ gorp.ecs_layer.query = function(world: World, included: {unknown}, excluded: {un
 	return world:view(unpack(included)):exclude(unpack(excluded))
 end
 
-gorp.ecs_layer.write = function(world: World, id: Id, ctype: unknown, value: unknown)
-	world:set(id, ctype, value)
+gorp.ecs_layer.write = function(world: World, id: Id, values: {[unknown]: unknown})
+	for ctype, value in values do
+		world:set(id, ctype, value)
+	end
+end
+
+gorp.ecs_layer.get_all_components = function(world: World, id: Id)
+	local ctypes = {}
+
+	for _, ctype in gorp.components do
+		if world:has(id, ctype) then
+			ctypes[ctype] = world:get(id, ctype)
+		end
+	end
+
+	return ctypes
 end
 
 gorp.ecs_layer.on_change = function(world: World, ctype: unknown, callback: (Id, unknown) -> ())

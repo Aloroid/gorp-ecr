@@ -3,13 +3,17 @@
 	"tree": {
 		"$className": "DataModel",
 
-		"Packages": {
-			"$path": "Packages",
-
-			"gorpecr": {
-				"$path": "src"
+		"ReplicatedStorage": {
+			"Packages": {
+				"$ignoreUnknownInstances": true,
+				
+				"$path": "Packages",
+	
+				"gorpecr": {
+					"$path": "src"
+				}
+	
 			}
-
 		}
 	}
 }
