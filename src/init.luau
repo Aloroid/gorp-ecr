@@ -14,8 +14,7 @@ gorp.ecs_layer.on_hook_world = function(world)
 end
 
 gorp.ecs_layer.id = function(id: number)
-	local key, ver = ecr.inspect(id)
-		return `{key}:{ver}`
+	return id
 end
 
 gorp.ecs_layer.get = function(world: World, id: Id, ctype: unknown)
